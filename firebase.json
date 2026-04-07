@@ -1,0 +1,18 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": ["firebase.json", ".firebaserc", "**/.git/**"],
+    "rewrites": [
+      {"source":"/nova",  "destination":"/nova_workspace.html"},
+      {"source":"/lex",   "destination":"/lex_workspace.html"},
+      {"source":"/zara",  "destination":"/zara_workspace.html"},
+      {"source":"/remy",  "destination":"/remy_workspace.html"},
+      {"source":"/kai",   "destination":"/kai_workspace.html"},
+      {"source":"/luna",  "destination":"/luna_workspace.html"}
+    ],
+    "headers": [{"source":"**","headers":[
+      {"key":"Cache-Control","value":"public, max-age=3600"},
+      {"key":"X-Content-Type-Options","value":"nosniff"}
+    ]}]
+  }
+}
