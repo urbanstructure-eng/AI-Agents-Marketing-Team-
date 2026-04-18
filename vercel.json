@@ -1,13 +1,60 @@
 {
   "version": 2,
-  "name": "workforceai",
   "builds": [
     {
-      "src": "index.html",
+      "src": "*.html",
       "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/nova",
+      "dest": "/nova_workspace.html"
+    },
+    {
+      "src": "/lex",
+      "dest": "/lex_workspace.html"
+    },
+    {
+      "src": "/zara",
+      "dest": "/zara_workspace.html"
+    },
+    {
+      "src": "/remy",
+      "dest": "/remy_workspace.html"
+    },
+    {
+      "src": "/kai",
+      "dest": "/kai_workspace.html"
+    },
+    {
+      "src": "/luna",
+      "dest": "/luna_workspace.html"
+    },
+    {
+      "src": "/nova_workspace",
+      "dest": "/nova_workspace.html"
+    },
+    {
+      "src": "/lex_workspace",
+      "dest": "/lex_workspace.html"
+    },
+    {
+      "src": "/zara_workspace",
+      "dest": "/zara_workspace.html"
+    },
+    {
+      "src": "/remy_workspace",
+      "dest": "/remy_workspace.html"
+    },
+    {
+      "src": "/kai_workspace",
+      "dest": "/kai_workspace.html"
+    },
+    {
+      "src": "/luna_workspace",
+      "dest": "/luna_workspace.html"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
@@ -17,16 +64,22 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
-      ]
-    },
-    {
-      "source": "/index.html",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     }
   ]
