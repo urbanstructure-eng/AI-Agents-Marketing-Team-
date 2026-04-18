@@ -56,6 +56,30 @@
       "dest": "/luna_workspace.html"
     },
     {
+      "src": "/nova_workspace.html",
+      "dest": "/nova_workspace.html"
+    },
+    {
+      "src": "/lex_workspace.html",
+      "dest": "/lex_workspace.html"
+    },
+    {
+      "src": "/zara_workspace.html",
+      "dest": "/zara_workspace.html"
+    },
+    {
+      "src": "/remy_workspace.html",
+      "dest": "/remy_workspace.html"
+    },
+    {
+      "src": "/kai_workspace.html",
+      "dest": "/kai_workspace.html"
+    },
+    {
+      "src": "/luna_workspace.html",
+      "dest": "/luna_workspace.html"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
@@ -66,19 +90,11 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=3600, s-maxage=3600"
+          "value": "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400"
         },
         {
           "key": "X-Content-Type-Options",
           "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
         }
       ]
     }
